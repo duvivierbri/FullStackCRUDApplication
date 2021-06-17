@@ -71,52 +71,28 @@ class SingleViewStudent extends Component{
   }
 
   render(){
-    let table = [];
-    let allCampuses = this.props.allCampuses;
     let student = this.state.student;
     let studentName = student.firstName + student.lastName;
-
-    for(let i = 0; i < allCampuses.length; i++){
-      let campus = allCampuses[i];
-      table.push(
-                  <option value={campus.id}>{campus.name}</option>
-                );
-    }
 
     return(
       <div className="App">
         <div className="App-header">
           <div style={{flexDirection: 'row', margin: '2%'}}>
             <Link to='/'>
-              <button className="button">
+              <button className="homeButton">
                 Home
               </button>
             </Link>
-            {/* <Link to='/campuslisting'>
-              <button className="button">
-                Campuses
-              </button>
-            </Link> */}
-            <Link to='/studentlisting'>
+            {/* <Link to='/studentArray'>
               <button className="button">
                 Students
               </button>
-            </Link>
+            </Link> */}
           </div>
           <img src={student.image_path} alt={studentName} />
           <h1> {studentName} </h1>
           <h3> GPA: {student.gpa} </h3>
           <p> This student is registered to a campus. </p>
-          <select className="ui dropdown"
-                  value={this.state.selectedNewCampusValue}
-                  onChange={this.handleCampusChange}
-                  style={{fontSize: '20px', width: '30%', height: '20%', borderRadius: '5px'}}>
-            <option value="" style= {{color: 'grey'}}>Select campus...</option>
-            {table}
-          </select>
-          <button className="red button">
-            Change Campus
-          </button>
         </div>
       </div>
     );
@@ -127,7 +103,6 @@ const mapStateToProps = (state) => {
   console.log(state);
   return {
     student: state.getSingleStudent,
-//    allCampuses: state.getCampuses
   };
 }
 
