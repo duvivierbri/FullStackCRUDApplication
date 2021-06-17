@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 //importing components
 import CampusCard from "./CampusCard";
 import AllCampusHeader from "./AllCampusHeader";
+import AddCampus from "./AddCampus";
 
 class AllCampus extends Component{
     state = {
@@ -12,7 +13,10 @@ class AllCampus extends Component{
 
     render(){
         return(
-            <AllCampusHeader/>
+            <div>
+                <AllCampusHeader/>
+                <AddCampus/>
+            </div>
         )
     }
 }export default AllCampus;

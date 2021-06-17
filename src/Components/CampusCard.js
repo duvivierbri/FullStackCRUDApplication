@@ -4,11 +4,6 @@ import ReactDOM from 'react-dom';
 function CampusCard(props){
     return (
         <div class="campusCard">
-
-            <div class="image">
-                <img src={props.imageSource}/>
-            </div>
-
             <div class="campusTitle">
                 <h1>{props.campusTitle}</h1>
             </div>
