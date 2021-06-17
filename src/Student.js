@@ -9,7 +9,7 @@ class Student extends Component {
     super(props);
 
     this.onEdit = this.onEdit.bind(this);
-    this.onDelete = this.onDelete.bind(this);
+    // this.onDelete = this.onDelete.bind(this);
     this.onViewStudent = this.onViewStudent.bind(this);
   }
 
@@ -34,7 +34,7 @@ class Student extends Component {
 
   render(){
     return(
-      <div className="column four wide" style={{margin: '4%'}}>
+      <div className="container" style={{margin: '4%'}}>
         <div className="cardContent">
               <div className="header">{this.props.student}</div>
                 <button className="ui button" onClick={this.onViewStudent}> View Student </button>
