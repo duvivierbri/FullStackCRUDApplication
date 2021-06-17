@@ -21,16 +21,16 @@ class Student extends Component {
     this.props.returnCurrentEditStudent(this.props.id);
   }
 
-  onDelete = (event) => {
-    axios.delete('http://localhost:3000/students/'+this.props.id)
-      .then(response => {
-        console.log(response);
-      })
-      .catch(err => {
-        console.log(err);
-      })
-    window.location.replace('studentlisting');
-  }
+//   onDelete = (event) => {
+//     axios.delete('http://localhost:3000/students/'+this.props.id)
+//       .then(response => {
+//         console.log(response);
+//       })
+//       .catch(err => {
+//         console.log(err);
+//       })
+//     window.location.replace('studentlisting');
+//   }
 
   render(){
     return(

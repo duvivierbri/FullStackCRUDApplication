@@ -76,11 +76,6 @@ class NewStudentForm extends Component{
               Home
             </button>
           </Link>
-          {/* <Link to='/campuslisting'>
-            <button className="button">
-              Campuses
-            </button>
-          </Link> */}
           <Link to='/studentlisting'>
             <button className="button">
               Students
@@ -138,7 +133,7 @@ class NewStudentForm extends Component{
                   onChange={this.handleCollegeIDInput}
                 />
             </div>
-            <p style={{color: 'black', fontSize: '13px'}}> Campus ID could be left empty, if you are adding from Campus Page. </p>
+            <p> Campus ID could be left empty, if you are adding from Campus Page. </p>
 
               <div className="black submit button" onClick={this.handleSubmit}>
                 {/* <i className="plus icon" /> */}

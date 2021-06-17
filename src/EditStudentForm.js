@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 class EditStudentForm extends Component{
   constructor(props){
@@ -50,7 +50,7 @@ class EditStudentForm extends Component{
   }
 
   handleSubmit = (event) => {
-    axios.put('http://localhost:7000/students/'+this.props.id, {
+    axios.put('http://localhost:3000/students/'+this.props.id, {
       "firstname": this.state.firstName,
       "lastname": this.state.lastName,
       "image": this.state.url,
@@ -76,16 +76,16 @@ class EditStudentForm extends Component{
                 Home
               </button>
             </Link>
-            <Link to='/campuslisting'>
+            {/* <Link to='/campuslisting'>
               <button className="button">
                 Campuses
               </button>
-            </Link>
-            <Link to='/studentlisting'>
+            </Link> */}
+            {/* <Link to='/studentlisting'>
               <button className="button">
                 Students
               </button>
-            </Link>
+            </Link> */}
           </div>
           <form className="Studentform" style={{width: '25%'}}>
             <div className="stackedForm">
