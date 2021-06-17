@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 
 function CampusCard(props){
     return (
-        <div class="campusCard">
-            <div class="campusTitle">
+        <div className="campusCard">
+            <div className="campusTitle">
                 <h1>{props.campusTitle}</h1>
             </div>
 
-            <div class="CampusDescription">
+            <div className="CampusDescription">
                 <p>{props.campusDescription}</p>
             </div>
 
-            <div class="LinkToDetailsPage">
+            <div className="LinkToDetailsPage">
                 <a href={props.detailsLink}>See More</a>
             </div>
         </div>
