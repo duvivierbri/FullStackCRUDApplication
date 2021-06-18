@@ -5,7 +5,6 @@ function Header(props){
     return (
         <div>
             <h1>Welcome to the College Search Homepage!</h1>
-
         </div>
         
     )

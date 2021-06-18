@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom';
 //importing components
 import Header from "./Header";
 
-class PageRender extends Component{
+class Homepage extends Component{
     render(){
         return(
             <Header/>
         )
     }
-}export default PageRender;
+}export default Homepage;

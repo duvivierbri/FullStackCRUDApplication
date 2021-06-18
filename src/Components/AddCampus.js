@@ -6,13 +6,13 @@ function AddCampus(props){
         <div>
             <form>
                 <p>Add A New Campus</p>
-                <label for="name">Name</label>
+                <label>Name</label>
                 <input name="name" type="text" />
 
-                <label for="description">Description</label>
+                <label>Description</label>
                 <input name="description" type="text" />
                 
-                <label for="address">City</label>
+                <label>Students Enrolled</label>
                 <input name="address" type="text" />
 
                 <button type="submit">Submit</button>
