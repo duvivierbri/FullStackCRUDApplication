@@ -70,13 +70,13 @@ class AddCampus extends Component{
                 <form onSubmit = {this.submitFunction}>
                     <p>Add A New Campus</p>
                     <label>Name</label>
-                    <input type="text" onChange = {this.updateName}/>
+                    <input type="text" onChange = {this.updateName} required/>
     
                     <label>Description</label>
-                    <input type="text" onChange = {this.updateDescription}/>
+                    <input type="text" onChange = {this.updateDescription} required/>
                     
                     <label>Address</label>
-                    <input type="text" onChange = {this.updateAddress}/>
+                    <input type="text" onChange = {this.updateAddress} required/>
                     
                     <button type="submit">Submit</button>
                 </form>
