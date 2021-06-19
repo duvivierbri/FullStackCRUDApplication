@@ -4,7 +4,6 @@ import axios from "axios";
 
 //importing components
 import CampusCard from "./CampusCard";
-import AllCampusHeader from "./AllCampusHeader";
 import AddCampus from "./AddCampus";
 
 class AllCampus extends Component{
@@ -16,7 +15,7 @@ class AllCampus extends Component{
     //When the page loads
     componentDidMount(){
         //Get campus data from database upon mount so cards can be displayed
-        {this.getCampusData}
+        this.getCampusData()
 
         if (this.state.campusData.length == 0){
             this.setState({
@@ -46,7 +45,9 @@ class AllCampus extends Component{
         const showCards = this.state.campusData.map(card => <CampusCard campus={card}/>)
         return(
             <div>
-                <AllCampusHeader/>
+                <h1>All Campuses</h1>
+                <p>Welcome to the all campuses page! Here you can take a look at all the 
+                campuses you already have and create new ones!</p>
                 <AddCampus/>
                 <h1>{this.state.loadMsg}</h1>
                 {showCards}

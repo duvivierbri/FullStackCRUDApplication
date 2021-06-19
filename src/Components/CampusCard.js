@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import ReactDOM from 'react-dom';
 
+//Each Campus displayed on the All Campus page are displayed using one of these CampusCard components
 function CampusCard(props){
     return (
         <div className="campusCard">
@@ -17,8 +18,7 @@ function CampusCard(props){
                 <p>Students Enrolled: {props.campus.students}</p>
             </div>
 
-            <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={props.deleteFunction}>Delete</button>
         </div>
         
     )
