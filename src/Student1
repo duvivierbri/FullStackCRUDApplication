@@ -1,0 +1,11 @@
+import React from 'react';
+
+const Student1 = (props) => (
+    <div className='Student1'>
+        Name: {props.name} <br/>
+        Description: {props.description} <br/>
+        <br/>
+    </div>
+)
+
+export default Student1;
