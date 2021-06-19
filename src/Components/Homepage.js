@@ -1,13 +1,10 @@
 import React, { Component } from "react"
 import ReactDOM from 'react-dom';
 
-//importing components
-import Header from "./Header";
-
 class Homepage extends Component{
     render(){
         return(
-            <Header/>
+            <h1>Welcome to the College Database Homepage!</h1>
         )
     }
 }export default Homepage;
