@@ -14,7 +14,7 @@ function AddCampus(props){
                 
                 <label>Students Enrolled</label>
                 <input name="address" type="text" />
-
+                
                 <button type="submit">Submit</button>
             </form>
         </div>

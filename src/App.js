@@ -4,6 +4,7 @@ import './App.css';
 import PageRender from './Components/Homepage';
 import AllCampus from './Components/AllCampus';
 import Homepage from './Components/Homepage';
+import SingleCampus from './Components/SingleCampus';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Link to="/">Home</Link>
         <Link to="/all-campus">All Campuses</Link>
+        <Link to="/single-campus">Single Campus</Link>
 
         <Switch>
           <Route exact path="/">
@@ -19,6 +21,10 @@ function App() {
 
           <Route path="/all-campus">
             <AllCampus />
+          </Route>
+
+          <Route path="/single-campus">
+            <SingleCampus />
           </Route>
         </Switch>
 

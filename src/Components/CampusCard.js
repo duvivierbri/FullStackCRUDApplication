@@ -4,20 +4,17 @@ import ReactDOM from 'react-dom';
 function CampusCard(props){
     return (
         <div className="campusCard">
+            <img src=""/>
             <div className="campusTitle">
-                <h3>{props.campus.name}</h3>
+                <h3>Name: {props.campus.name}</h3>
             </div>
 
             <div className="CampusDescription">
-                <p>{props.campus.description}</p>
+                <p>Description: {props.campus.description}</p>
             </div>
 
             <div className="CampusStudentsEnrolled">
-                <p>{props.campus.students}</p>
-            </div>
-
-            <div className="LinkToDetailsPage">
-                <a href={props.detailsLink}>See More</a>
+                <p>Students Enrolled: {props.campus.students}</p>
             </div>
 
             <button>Edit</button>
