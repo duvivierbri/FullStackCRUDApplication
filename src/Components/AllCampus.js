@@ -13,9 +13,10 @@ class AllCampus extends Component{
         loadMsg: ""
     }
 
+    //When the page loads
     componentDidMount(){
-        //get data when site first opens
-        //this.fetchData();
+        //Get campus data from database upon mount so cards can be displayed
+        {this.getCampusData}
 
         if (this.state.campusData.length == 0){
             this.setState({
@@ -28,39 +29,20 @@ class AllCampus extends Component{
         }
     }
 
-    fetchData = () => {
-        axios.get('./data.json')
-        .then(function (response) {
-            // handle success
-            console.log(response);
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        });
-
-
-        /*
-        fetch('./data.json', {
-            headers: { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-             },
-             body: JSON.stringify(data)
-          })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log('Campus Data: ' + data);
+    getCampusData = () => {
+        axios.get('http://localhost:3000/APIURLGOESHERE')
+        .then((response) => {
             this.setState({
-                campusData: data.name
+                campusData: response
             })
-          }).catch((error) => {
-              console.log(error);
-          });
-          */
+        })
+        .catch((error) => console.log(error));
+
+        console.log("Campuses from Database: \n" + this.state.campusData)
     }
 
     render(){
+        //populate page with Campus Cards containing information from the database
         const showCards = this.state.campusData.map(card => <CampusCard campus={card}/>)
         return(
             <div>
