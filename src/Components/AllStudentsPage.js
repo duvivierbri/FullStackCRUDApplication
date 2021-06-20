@@ -50,7 +50,7 @@ class AllStudentsPage extends Component{
         return(
             <div>
                 <h1>All Students!!</h1>
-                <Link to='/new-student'>Click Here To Add A Student!</Link>
+                <Link to='/add-student'>Click Here To Add A Student!</Link>
                 <p>{this.state.loadMsg}</p>
                 {showStudents}
             </div>

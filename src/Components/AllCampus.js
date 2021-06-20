@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import axios from "axios";
 
 //importing components
@@ -47,13 +48,12 @@ class AllCampus extends Component{
         return(
             <div>
                 <h1>All Campuses</h1>
-
                 <p>Welcome to the all campuses page! Here you can take a look at all the 
                 campuses you already have and create new ones!</p>
 
-                <AddCampus/>
-
                 <h1>{this.state.loadMsg}</h1>
+
+                <Link to='/add-campus'>Click Here To Add A New Campus!</Link>
 
                 {showCards}
             </div>

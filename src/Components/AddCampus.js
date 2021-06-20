@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 const axios = require('axios');
 
 class AddCampus extends Component{

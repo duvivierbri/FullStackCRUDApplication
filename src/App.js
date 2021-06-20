@@ -7,6 +7,7 @@ import Homepage from './Components/Homepage';
 import SingleCampus from './Components/SingleCampus';
 import AllStudentsPage from './Components/AllStudentsPage';
 import NewStudentForm from './Components/newStudentForm';
+import AddCampus from './Components/AddCampus';
 
 function App() {
   return (
@@ -33,8 +34,12 @@ function App() {
             <AllStudentsPage />
           </Route>
 
-          <Route path="/new-student">
+          <Route path="/add-student">
             <NewStudentForm />
+          </Route>
+
+          <Route path="/add-campus">
+            <AddCampus />
           </Route>
 
         </Switch>
