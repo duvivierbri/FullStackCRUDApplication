@@ -55,7 +55,7 @@ class AllStudentsPage extends Component{
                 <p className="allStudentsDescription">Welcome to the all students page! Here, you can see all of the students, and click on 
                     them for more information like their name, ID number, and much more!
                 </p>
-                <Link className="addStudentLink" to='/add-student'>Click Here To Add A Student!</Link>
+                <Link className="addStudentLink" to='/add-student'>+ Add New Student</Link>
                 <p>{this.state.loadMsg}</p>
 
                 <div class="studentCardsDisplay">
