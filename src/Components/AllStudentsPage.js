@@ -11,8 +11,8 @@ class AllStudentsPage extends Component{
       this.state = {
         //Student data has mock data so you can get an idea of what the cards look like :)
         studentData: [
-            {firstName: "Emily", lastName: "Brown", gpa: 3.20, email: "emily@mail.com", collegeID: 12345678}, 
-            {firstName: "Sara", lastName: "Lopez", gpa: 2.9, email: "sara@mail.com", collegeID: 10093456}],
+            {id: 1, firstName: "Emily", lastName: "Brown", gpa: 3.20, email: "emily@mail.com", collegeID: 12345678}, 
+            {id: 2, firstName: "Sara", lastName: "Lopez", gpa: 2.9, email: "sara@mail.com", collegeID: 10093456}],
         loadMsg:""
       }
   }
@@ -35,7 +35,7 @@ class AllStudentsPage extends Component{
 
     getStudentData = () => {
         //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
-        axios.get('http://localhost:4000/campuses')
+        axios.get('http://localhost:4000/ENTERSTUDENTDATABASEHERE')
         .then((response) => {
             this.setState({
                 studentData: response
@@ -46,9 +46,14 @@ class AllStudentsPage extends Component{
         console.log("Students from Database: \n" + this.state.studentData)
     }
 
-  render(){
+    //function to handle deleting
+    toBeDeleted = (id, name, gpa, email, collegeID) => {
+        console.log();
+    }
+
+    render(){
       //Display all students from database
-      const showStudents = this.state.studentData.map(data => <StudentCard student={data}/>)
+      const showStudents = this.state.studentData.map(data => <StudentCard student={data} deleteFunction={this.toBeDeleted}/>)
         return(
             <div>
                 <h1 className="allStudentsTitle">ALL STUDENTS</h1>

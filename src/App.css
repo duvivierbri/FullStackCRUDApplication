@@ -134,6 +134,16 @@
   padding: 10px;
 }
 
+.campusDetails{
+  color: white;
+  background-color: blue;
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
 .campusDelete{
   color: white;
   background-color: red;

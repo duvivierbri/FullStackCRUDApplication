@@ -43,6 +43,10 @@ class AllCampus extends Component{
         console.log("Campuses from Database: \n" + this.state.campusData)
     }
 
+    sendDataToDetailsPage = (title, description) =>{
+        
+    }
+
     render(){
         //populate page with Campus Cards containing information from the database
         const showCards = this.state.campusData.map(card => <CampusCard campus={card}/>)
