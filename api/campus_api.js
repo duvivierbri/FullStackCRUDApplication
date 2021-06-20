@@ -97,6 +97,7 @@ router.delete('/:id', (req, res, next) => {
     })
     .catch(err => {
         res.status(500)
+        console.log(err)
         .json({
             message: "Cant destroy campus",
             err
