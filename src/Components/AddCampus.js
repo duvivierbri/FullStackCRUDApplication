@@ -81,8 +81,10 @@ class AddCampus extends Component{
 
                     <input className = "campusFormInputs" type="text" onChange = {this.updateAddress} placeholder = "Address of Campus" required/>
                     <br/>
-                    
+
                     <button type="submit">Submit</button>
+                    <br/>
+                    <Link className="newCampusBackButton" to='/all-campus'>Go Back</Link>
                 </form>
             </div>
         )

@@ -74,6 +74,10 @@
   border-radius: 10px;
 }
 
+.newCampusBackButton{
+  margin-left: 500px;
+}
+
 /*NEW STUDENT FORM CSS*/
 .newStudentForm {
   margin-top: 70px;
