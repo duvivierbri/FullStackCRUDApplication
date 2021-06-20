@@ -9,7 +9,7 @@ class AllStudentsPage extends Component{
       super(props);
       
       this.state = {
-        //Student data had mock data so you can get an idea of what the cards look like :)
+        //Student data has mock data so you can get an idea of what the cards look like :)
         studentData: [{firstName: "Emily", lastName: "Brown", gpa: 3.20, email: "emily@mail.com", collegeID: 12345678}],
         loadMsg:""
       }
@@ -17,7 +17,7 @@ class AllStudentsPage extends Component{
 
     //When the page loads
     componentDidMount(){
-        //Get campus data from database upon mount so cards can be displayed
+        //Get student data from database upon mount so cards can be displayed
         this.getStudentData()
 
         if (this.state.studentData.length == 0){
@@ -47,13 +47,14 @@ class AllStudentsPage extends Component{
   render(){
       //Display all students from database
       const showStudents = this.state.studentData.map(data => <StudentCard student={data}/>)
-  return( 
+    return( 
       <div>
           <h1>All Students!!</h1>
+          <Link to='/newstudent'>Click Here To Add A Student!</Link>
           <p>{this.state.loadMsg}</p>
           {showStudents}
       </div>
-  );
+    );
 }
 }
 

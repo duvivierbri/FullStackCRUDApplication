@@ -61,13 +61,30 @@ class NewStudentForm extends Component{
     }).catch(error => {
       console.log(error);
     });
-
-    window.location.replace("/allstudents")
   }
+
+  //Sends the information off to database
+  addStudent = async(newStudentObject) => {
+    //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
+   let response = axios.post('http://localhost:3000/STUDENTDATABASEHERE', newStudentObject)
+   .then((response) => {
+     alert("Student Added! You can see the new student in the \"All Students\" page!");
+     console.log(response)
+   })
+   .catch((error) => console.log(error))
+
+   //Reset values back to default 
+   {this.setState({
+      firstName: '',
+      lastName: '',
+      gpa: '',
+      email: '',
+      collegeID: ''
+   })}
+}
 
   render(){
   return(
-    
     <div>
     <form>
       <h1>Create A New Student</h1>
