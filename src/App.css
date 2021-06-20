@@ -37,6 +37,22 @@
   }
 }
 
+/*NAVIGATION MENU ACROSS TOP*/
+.navigationMenu{
+  padding: 30px;
+}
+
+.navigationMenuItems{
+  margin-left: 40px;
+  margin-right: 40px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navigationMenuItems:hover{
+  background-color: gray;
+}
+
 /*NEW CAMPUS FORM CSS*/
 .AddCampusForm {
   margin-top: 100px;
