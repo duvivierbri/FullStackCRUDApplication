@@ -9,8 +9,8 @@ import CampusCard from "./CampusCard";
 class AllCampus extends Component{
     state = {
         campusData: [
-            {"name":"Lehman", "description":"A big campus"},
-            {"name":"Hunter", "description":"Another big campus"}], //List of campus objects (each campus) in database
+            {"id": 1, "name":"Lehman", "description":"A big campus"},
+            {"id": 2, "name":"Hunter", "description":"Another big campus"}], //List of campus objects (each campus) in database
         loadMsg: ""
     }
 
