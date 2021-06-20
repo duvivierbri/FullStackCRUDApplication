@@ -44,7 +44,6 @@ router.post('/', (req, res, next) => {
         email: req.body.email,
         gpa: req.body.gpa,
         collegeID: req.body.collegeID
-        
     })
     .then(student => {
         console.log("hshshshshs")
