@@ -5,13 +5,14 @@ import axios from "axios";
 
 //importing components
 import CampusCard from "./CampusCard";
+import SingleCampus from "./SingleCampus";
 
 class AllCampus extends Component{
     state = {
         campusData: [
             {"id": 1, "name":"Lehman", "description":"A big campus"},
             {"id": 2, "name":"Hunter", "description":"Another big campus"}], //List of campus objects (each campus) in database
-        loadMsg: ""
+        loadMsg: "",
     }
 
     //When the page loads
