@@ -1,5 +1,4 @@
 import {Route, Switch, Link, BrowserRouter} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import PageRender from './Components/Homepage';
 import AllCampus from './Components/AllCampus';
