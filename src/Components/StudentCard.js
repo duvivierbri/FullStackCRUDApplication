@@ -29,6 +29,13 @@ class StudentCard extends React.Component{
         
     }
 
+    showDetails = () => {
+        alert("More Details On " + this.props.student.firstName 
+                + "\nGPA: " + this.props.student.gpa
+                + "\nEmail: " + this.props.student.email
+                + "\nCollege ID: " + this.props.student.collegeID)
+    }
+
     //get the information to send to the database
     render(){
         return (
@@ -39,11 +46,9 @@ class StudentCard extends React.Component{
                 
                 <div className="studentInfo">
                     <h3>Name: {this.props.student.firstName} {this.props.student.lastName}</h3>
-                    <p>GPA: {this.props.student.gpa}</p>
-                    <p>Email: {this.props.student.email}</p>
-                    <p>College ID: {this.props.student.collegeID}</p>
                 </div>
                 
+                <button onClick={this.showDetails}>See Details</button>
                 <button className="studentDelete" onClick={this.deleteStudent}>Delete</button>
             </div>
         
