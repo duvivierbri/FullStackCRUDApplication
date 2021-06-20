@@ -53,7 +53,9 @@ class AddCampus extends Component{
     addCampus = async(newCampusObject) => {
         //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
        let response = axios.post('http://localhost:3000/APIURLGOESHERE', newCampusObject)
-       .then((response) => console.log(response.data))
+       .then((response) => {
+           console.log(response.data)
+       })
        .catch((error) => console.log(error))
 
        //Reset values back to default 
@@ -67,17 +69,17 @@ class AddCampus extends Component{
 
     render(){
         return (
-            <div>
+            <div className="AddCampusForm">
                 <form onSubmit = {this.submitFunction}>
-                    <p>Add A New Campus Here!</p>
+                    <p className="campusFormTitle">Add A New Campus Here!</p>
 
-                    <input type="text" onChange = {this.updateName} placeholder = "Name of Campus" required/>
+                    <input className = "campusFormInputs" type="text" onChange = {this.updateName} placeholder = "Name of Campus" required/>
                     <br/>
 
-                    <input type="text" onChange = {this.updateDescription} placeholder = "Description of Campus" required/>
+                    <input className = "campusFormInputs" type="text" onChange = {this.updateDescription} placeholder = "Description of Campus" required/>
                     <br/>
 
-                    <input type="text" onChange = {this.updateAddress} placeholder = "Address of Campus" required/>
+                    <input className = "campusFormInputs" type="text" onChange = {this.updateAddress} placeholder = "Address of Campus" required/>
                     <br/>
                     
                     <button type="submit">Submit</button>
