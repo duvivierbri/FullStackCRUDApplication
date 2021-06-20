@@ -50,23 +50,21 @@ class NewStudentForm extends Component{
 
   submitFunction = (event) => {
     //Do not know the url for student database, so I added a placeholder for now - UPDATE LATER!
-    axios.post('http://localhost:4000/campuses',{
-      'firstName': this.state.firstName,
-      'lastName': this.state.lastName,
-      'gpa': this.state.gpa,
-      'email': this.state.email,
-      'collegeID': this.state.collegeID
-    }).then(response => {
-      console.log(response);
-    }).catch(error => {
-      console.log(error);
-    });
+    let newStudent = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      gpa: this.state.gpa,
+      email: this.state.email,
+      collegeID: this.state.collegeID
+    }
+
+    this.addStudent(newStudent);
   }
 
   //Sends the information off to database
   addStudent = async(newStudentObject) => {
     //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
-   let response = axios.post('http://localhost:3000/STUDENTDATABASEHERE', newStudentObject)
+   axios.post('http://localhost:3000/STUDENTDATABASEHERE', newStudentObject)
    .then((response) => {
      alert("Student Added! You can see the new student in the \"All Students\" page!");
      console.log(response)

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 
 //Each Campus displayed on the All Campus page are displayed using one of these CampusCard components
 function CampusCard(props){
