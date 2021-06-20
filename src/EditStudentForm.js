@@ -10,7 +10,6 @@ class EditStudentForm extends Component{
         lastName: '',
         gpa: '',
         email: '',
-        url: '',
         collegeID: ''
       }
 
