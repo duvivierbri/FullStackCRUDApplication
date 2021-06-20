@@ -86,22 +86,24 @@ class NewStudentForm extends Component{
   render(){
   return(
     <div>
-    <form onSubmit={this.submitFunction}>
-      <h1>Create A New Student</h1>
-      <input placeholder = "Your First Name" onChange={this.updateFirstName} required/>
+    <form className="newStudentForm" onSubmit={this.submitFunction}>
+      <p class="newStudentTitle">Create A New Student</p>
+      <input className="newStudentInputs" placeholder = "Your First Name" onChange={this.updateFirstName} required/>
       <br/>
-      <input placeholder = "Your Last Name" onChange={this.updateLastName} required/>
+      <input className="newStudentInputs" placeholder = "Your Last Name" onChange={this.updateLastName} required/>
       <br/>
-      <input placeholder = "Your GPA" onChange={this.updateGPA} required/>
+      <input className="newStudentInputs" placeholder = "Your GPA" onChange={this.updateGPA} required/>
       <br/>
-      <input placeholder = "Your E-Mail" onChange={this.updateEmail} required/>
+      <input className="newStudentInputs" placeholder = "Your E-Mail" onChange={this.updateEmail} required/>
       <br/>
-      <input placeholder = "Your College ID" onChange={this.updateCollegeID} required/>
+      <input className="newStudentInputs" placeholder = "Your College ID" onChange={this.updateCollegeID} required/>
       <br/>
       <button type="submit">Submit</button>
+      <br/>
+      <Link className="newStudentBackButton" to='/all-students'>Go Back</Link>
     </form>
 
-    <Link to='/all-students'>Go Back</Link>
+    
     
     </div>
   );

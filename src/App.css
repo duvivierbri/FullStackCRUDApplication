@@ -59,7 +59,7 @@
 }
 
 /*NEW STUDENT FORM CSS*/
-.AddCampusForm {
+.newStudentForm {
   margin-top: 100px;
   margin-left: 300px;
   margin-right: 300px;
@@ -68,13 +68,17 @@
   border: 2px solid black
 }
 
-.campusFormTitle{
+.newStudentTitle{
   font-size: 25px;
 }
 
-.campusFormInputs{
+.newStudentInputs{
   margin: 5px;
   font-size: 20px;
   padding: 5px;
   border-radius: 10px;
+}
+
+.newStudentBackButton{
+  margin-left: 500px;
 }
