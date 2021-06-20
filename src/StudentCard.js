@@ -6,25 +6,21 @@ function StudentCard(props){
     return (
         <div className="StudentCard">
             <div className="StudentFirstName">
-                <h3>Name: {props.student.firstName}</h3>
-            </div>
-
-            <div className="StudentLastName">
-                <p>Description: {props.student.lastName}</p>
+                <h3>Name: {props.student.firstName} {props.student.lastName}</h3>
             </div>
 
             <div className="StudentGPA">
-                <p>Students Enrolled: {props.student.gpa}</p>
+                <p>GPA: {props.student.gpa}</p>
             </div>
 
             <div className="StudentEmail">
-                <p>Students Enrolled: {props.student.email}</p>
+                <p>Email: {props.student.email}</p>
             </div>
 
             <div className="StudentID">
-                <p>Students Enrolled: {props.student.collegeID}</p>
+                <p>College ID: {props.student.collegeID}</p>
             </div>
         </div>
         
     )
-} export default CampusCard;
+} export default StudentCard;

@@ -71,15 +71,15 @@ class NewStudentForm extends Component{
     <div>
     <form>
       <h1>Create A New Student</h1>
-      <input placeholder = "Your First Name" onChange={this.updateFirstName}/>
+      <input placeholder = "Your First Name" onChange={this.updateFirstName} required/>
       <br/>
-      <input placeholder = "Your Last Name" onChange={this.updateLastName}/>
+      <input placeholder = "Your Last Name" onChange={this.updateLastName} required/>
       <br/>
-      <input placeholder = "Your GPA" onChange={this.updateGPA}/>
+      <input placeholder = "Your GPA" onChange={this.updateGPA} required/>
       <br/>
-      <input placeholder = "Your E-Mail" onChange={this.updateEmail}/>
+      <input placeholder = "Your E-Mail" onChange={this.updateEmail} required/>
       <br/>
-      <input placeholder = "Your College ID" onChange={this.updateCollegeID}/>
+      <input placeholder = "Your College ID" onChange={this.updateCollegeID} required/>
       <br/>
       <button type="submit">Submit</button>
     </form>
