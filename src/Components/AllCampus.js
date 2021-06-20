@@ -5,11 +5,12 @@ import axios from "axios";
 
 //importing components
 import CampusCard from "./CampusCard";
-import AddCampus from "./AddCampus";
 
 class AllCampus extends Component{
     state = {
-        campusData: [{"name":"Lehman", "description":"A big campus", "students": 7}], //List of campus objects (each campus) in database
+        campusData: [
+            {"name":"Lehman", "description":"A big campus"},
+            {"name":"Hunter", "description":"Another big campus"}], //List of campus objects (each campus) in database
         loadMsg: ""
     }
 
@@ -51,9 +52,9 @@ class AllCampus extends Component{
                 <p className="allCampusDescription">Welcome to the all campuses page! Here you can take a look at all the 
                 campuses you already have and create new ones!</p>
 
-                <h1>{this.state.loadMsg}</h1>
+                <Link className="addCampusLink" to='/add-campus'>+ Add A New Campus!</Link>
 
-                <Link className="addCampusLink" to='/add-campus'>Click Here To Add A New Campus!</Link>
+                <h1>{this.state.loadMsg}</h1>
 
                 {showCards}
             </div>

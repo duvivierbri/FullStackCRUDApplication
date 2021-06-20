@@ -109,12 +109,51 @@
   background-color: gray;
 }
 
+/*CAMPUS CARD*/
+.campusCard{
+  display: grid;
+  display: inline-block;
+  background-color: rgb(197, 197, 255);
+  margin: 20px;
+  width: 200px;
+}
+
+.campusImage{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.campusImage img{
+  width: 200px;
+  height: 200px;
+}
+
+.campusInfo{
+  grid-row: 1;
+  grid-column: 2;
+  padding: 10px;
+}
+
+.campusDelete{
+  color: white;
+  background-color: red;
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.campusDelete:hover{
+  background-color: gray;
+}
+
 /*STUDENT CARD*/
 .studentCard{
   display: grid;
   display: inline-block;
   background-color: rgb(197, 197, 255);
   margin: 20px;
+  width: 200px;
 }
 
 .studentImage{
