@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = require('../dbinit');
+const db = require('../../database/dbinit');
 
 const Student = db.sequelize.define('student', {
 
@@ -15,7 +15,7 @@ const Student = db.sequelize.define('student', {
 
     },
 
-    firstname: {
+    lastname: {
 
         type: Sequelize.STRING,
         allowNull: false,
@@ -51,6 +51,18 @@ const Student = db.sequelize.define('student', {
         validate: {
 
             len: [0.0, 4.0]
+
+        }
+
+    },
+
+    collegeID: {
+
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+
+            notEmpty: true,
 
         }
 

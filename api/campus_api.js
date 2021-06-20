@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
         res.status(200)
         .json({
             message: "Success!",
-            campuses,
+            campuses
         });
     }).catch(err => {
         res.status(500)

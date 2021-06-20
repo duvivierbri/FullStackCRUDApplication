@@ -37,11 +37,17 @@ router.get('/:id', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
+    console.log(req.body)
     models.Student.create({
-        name: req.body.name,
+        firstname: req.body.firstName,
+        lastname: req.body.lastName,
+        email: req.body.email,
         gpa: req.body.gpa,
+        collegeID: req.body.collegeID
+        
     })
     .then(student => {
+        console.log("hshshshshs")
         res.status(201)
         .json({
             message: "Success",
@@ -49,6 +55,7 @@ router.post('/', (req, res, next) => {
         })
     })
     .catch(err => {
+        console.log(err)
         res.status(400)
         .json({
             message: "Error posting",

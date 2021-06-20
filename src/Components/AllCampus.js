@@ -30,10 +30,11 @@ class AllCampus extends Component{
 
     getCampusData = () => {
         //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
-        axios.get('http://localhost:3000/APIURLGOESHERE')
+        axios.get('http://localhost:4000/campuses')
         .then((response) => {
+            console.log(response)
             this.setState({
-                campusData: response
+                campusData: response.data.campuses
             })
         })
         .catch((error) => console.log(error));
