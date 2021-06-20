@@ -19,7 +19,6 @@ function App() {
           <Link className="navigationMenuItems" to="/all-students">All Students</Link>
         </div>
         
-
         <Switch>
           <Route exact path="/">
             <Homepage />
@@ -44,9 +43,7 @@ function App() {
           <Route path="/add-campus">
             <AddCampus />
           </Route>
-
         </Switch>
-
       </BrowserRouter>
     </div>
   );
