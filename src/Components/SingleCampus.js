@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom';
 
 class SingleCampus extends Component{
     state = {
-        title: "Lehman", //List of campus objects (each campus) in database
+        title: "TITLE GOES HERE", //List of campus objects (each campus) in database
         img: "",
-        description: "A big campus",
-
+        address: "ADDRESS GOES HERE",
+        description: "DESCRIPTION GOES HERE"
     }
 
     render(){
         return(
-            <h1>{this.state.title}</h1>
+            <div>
+                <h1>{this.state.title}</h1>
+                <p>{this.state.address}</p>
+                <p>{this.state.description}</p>
+            </div>
         )
     }
 }export default SingleCampus;
