@@ -1,5 +1,5 @@
+/*
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 // import { returnCurrentEditStudent } from '../actions';
 //import Campus from './Campus';
@@ -83,11 +83,11 @@ class SingleViewStudent extends Component{
                 Home
               </button>
             </Link>
-            {/* <Link to='/studentArray'>
+            { <Link to='/studentArray'>
               <button className="button">
                 Students
               </button>
-            </Link> */}
+            </Link> }
           </div>
           <img src={student.image_path} alt={studentName} />
           <h1> {studentName} </h1>
@@ -107,3 +107,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {returnCurrentEditStudent})(SingleViewStudent);
+*/

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import axios from 'axios';
+
+//Import Components
+import AllStudentsPage from './AllStudentsPage';
 
 class NewStudentForm extends Component{
   constructor(props){
@@ -11,138 +14,78 @@ class NewStudentForm extends Component{
         lastName: '',
         gpa: '',
         email: '',
-        url: '',
         collegeID: ''
       }
-
-      this.handleFirstNameInput = this.handleFirstNameInput.bind(this);
-      this.handleLastNameInput = this.handleLastNameInput.bind(this);
-      this.handleGPAInput = this.handleGPAInput.bind(this);
-      this.handleURLInput = this.handleURLInput.bind(this);
-      this.handleEmailInput = this.handleEmailInput.bind(this);
-      this.handleCollegeIDInput = this.handleCollegeIDInput.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleFirstNameInput = (e) => {
-    this.setState({firstName: e.target.value});
+  updateFirstName = (event) => {
+    this.setState({
+      firstName: event.target.value
+    });
   }
 
-  handleLastNameInput = (e) => {
-    this.setState({lastName: e.target.value});
+  updateLastName = (event) => {
+    this.setState({
+      lastName: event.target.value
+    });
   }
 
-  handleGPAInput = (e) => {
-    this.setState({gpa: e.target.value});
+  updateGPA = (event) => {
+    this.setState({
+      gpa: event.target.value
+    });
   }
 
-  handleURLInput = (e) => {
-    this.setState({url: e.target.value});
+  updateEmail = (event) => {
+    this.setState({
+      email: event.target.value
+    })
   }
 
-  handleEmailInput = (e) => {
-    this.setState({email: e.target.value})
+  updateCollegeID = (event) => {
+    this.setState({
+      collegeID: event.target.value
+    })
   }
 
-  handleCollegeIDInput = (e) => {
-    this.setState({collegeID: e.target.value})
-  }
-
-  handleSubmit = (event) => {
-    axios.post('http://localhost:3000/addStudents',{
+  submitFunction = (event) => {
+    //Do not know the url for student database, so I added a placeholder for now - UPDATE LATER!
+    axios.post('http://localhost:3000/STUDENTDATABASEURLHERE',{
       'firstName': this.state.firstName,
       'lastName': this.state.lastName,
-      'url': this.state.url,
       'gpa': this.state.gpa,
       'email': this.state.email,
       'collegeID': this.state.collegeID
     }).then(response => {
       console.log(response);
-    }).catch(err => {
-      console.log(err);
+    }).catch(error => {
+      console.log(error);
     });
 
-    window.location.replace('studentlisting');
+    window.location.replace("/allstudents")
   }
 
   render(){
-
   return(
-    <div className="App">
-      <div className="App-header">
-        <div style={{flexDirection: 'row', margin: '1%'}}>
-          <Link to='/'>
-            <button className="button">
-              Home
-            </button>
-          </Link>
-          <Link to='/studentlisting'>
-            <button className="button">
-              Students
-            </button>
-          </Link>
-        </div>
-        <form className="studnentForm">
-          <div className="stackedForm">
-          <h1 style={{color: 'tan'}}> Add New Student </h1>
-            <div className="field">
-                <input
-                  type="text"
-                  name="firstname"
-                  placeholder="Student First Name"
-                  onChange={this.handleFirstNameInput}
-                />
-            </div>
-            <div className="field">
-                <input
-                  type="text"
-                  name="lastname"
-                  placeholder="Student Last Name"
-                  onChange={this.handleLastNameInput}
-                />
-            </div>
-            <div className="field">
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="Student Email"
-                  onChange={this.handleEmailInput}
-                />
-            </div>
-            <div className="field">
-                <input
-                  type="text"
-                  name="gpa"
-                  placeholder="Student GPA"
-                  onChange={this.handleGPAInput}
-                />
-            </div>
-            <div className="field">
-                <input
-                  type="text"
-                  name="url"
-                  placeholder="Student URL"
-                  onChange={this.handleURLInput}
-                />
-            </div>
-            <div className="field">
-                <input
-                  type="text"
-                  name="collegeID"
-                  placeholder="Campus ID (if possible)"
-                  onChange={this.handleCollegeIDInput}
-                />
-            </div>
-            <p> Campus ID could be left empty, if you are adding from Campus Page. </p>
+    
+    <div>
+    <form>
+      <h1>Create A New Student</h1>
+      <input placeholder = "Your First Name" onChange={this.updateFirstName}/>
+      <br/>
+      <input placeholder = "Your Last Name" onChange={this.updateLastName}/>
+      <br/>
+      <input placeholder = "Your GPA" onChange={this.updateGPA}/>
+      <br/>
+      <input placeholder = "Your E-Mail" onChange={this.updateEmail}/>
+      <br/>
+      <input placeholder = "Your College ID" onChange={this.updateCollegeID}/>
+      <br/>
+      <button type="submit">Submit</button>
+    </form>
 
-              <div className="black submit button" onClick={this.handleSubmit}>
-                {/* <i className="plus icon" /> */}
-                Add Student
-              </div>
-
-          </div>
-        </form>
-      </div>
+    <Link to='/allstudents'>Go Back</Link>
+    
     </div>
   );
 }

@@ -1,8 +1,6 @@
-
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
 
 class EditStudentForm extends Component{
   constructor(props){
@@ -157,4 +155,4 @@ const mapStateToProps = (state) => {
   };
 }
 
-export default connect(mapStateToProps)(EditStudentForm);
+export default EditStudentForm;
