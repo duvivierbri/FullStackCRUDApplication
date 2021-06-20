@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -53,6 +49,57 @@
   background-color: gray;
 }
 
+/*ALL STUDENTS PAGE*/
+.allStudentsTitle{
+  text-align: center;
+  color: white;
+  background-color: rgb(175, 175, 175);
+  padding: 100px;
+}
+
+.allStudentsDescription{
+  text-align: center;
+  background-color: rgb(166, 248, 166);
+  padding: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 15px;;
+}
+
+.addStudentLink{
+  text-decoration: none;
+  color:black;
+  border: 2px solid black;
+  margin-left: 10px;
+}
+
+.addStudentLink:hover{
+  background-color: gray;
+}
+
+/*STUDENT CARD*/
+.studentCard{
+  display: grid;
+  display: inline-block;
+  background-color: rgb(197, 197, 255);
+  margin: 20px;
+}
+
+.studentImage{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.studentImage img{
+  width: 200px;
+  height: 200px;
+}
+
+.studentInfo{
+  grid-row: 2;
+  padding: 10px;
+}
+
 /*NEW CAMPUS FORM CSS*/
 .AddCampusForm {
   margin-top: 100px;
@@ -80,6 +127,7 @@
 
 /*NEW STUDENT FORM CSS*/
 .newStudentForm {
+  text-align: center;
   margin-top: 70px;
   margin-left: 300px;
   margin-right: 300px;

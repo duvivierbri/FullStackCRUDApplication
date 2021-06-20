@@ -10,7 +10,9 @@ class AllStudentsPage extends Component{
       
       this.state = {
         //Student data has mock data so you can get an idea of what the cards look like :)
-        studentData: [{firstName: "Emily", lastName: "Brown", gpa: 3.20, email: "emily@mail.com", collegeID: 12345678}],
+        studentData: [
+            {firstName: "Emily", lastName: "Brown", gpa: 3.20, email: "emily@mail.com", collegeID: 12345678}, 
+            {firstName: "Sara", lastName: "Lopez", gpa: 2.9, email: "sara@mail.com", collegeID: 10093456}],
         loadMsg:""
       }
   }
@@ -49,10 +51,16 @@ class AllStudentsPage extends Component{
       const showStudents = this.state.studentData.map(data => <StudentCard student={data}/>)
         return(
             <div>
-                <h1>All Students!!</h1>
-                <Link to='/add-student'>Click Here To Add A Student!</Link>
+                <h1 className="allStudentsTitle">ALL STUDENTS</h1>
+                <p className="allStudentsDescription">Welcome to the all students page! Here, you can see all of the students, and click on 
+                    them for more information like their name, ID number, and much more!
+                </p>
+                <Link className="addStudentLink" to='/add-student'>Click Here To Add A Student!</Link>
                 <p>{this.state.loadMsg}</p>
-                {showStudents}
+
+                <div class="studentCardsDisplay">
+                    {showStudents}
+                </div>
             </div>
         );
     }
