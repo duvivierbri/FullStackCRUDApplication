@@ -59,8 +59,6 @@ class EditStudentForm extends Component{
     }).catch(err => {
       console.log(err);
     })
-
-     window.location.replace('/studentlisting');
   }
 
   render(){

@@ -47,15 +47,15 @@ class AllStudentsPage extends Component{
   render(){
       //Display all students from database
       const showStudents = this.state.studentData.map(data => <StudentCard student={data}/>)
-    return( 
-      <div>
-          <h1>All Students!!</h1>
-          <Link to='/newstudent'>Click Here To Add A Student!</Link>
-          <p>{this.state.loadMsg}</p>
-          {showStudents}
-      </div>
-    );
-}
+        return(
+            <div>
+                <h1>All Students!!</h1>
+                <Link to='/newstudent'>Click Here To Add A Student!</Link>
+                <p>{this.state.loadMsg}</p>
+                {showStudents}
+            </div>
+        );
+    }
 }
 
 export default AllStudentsPage;
