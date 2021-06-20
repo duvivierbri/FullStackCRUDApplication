@@ -37,7 +37,7 @@
   }
 }
 
-/*CAMPUS FORM CSS*/
+/*NEW CAMPUS FORM CSS*/
 .AddCampusForm {
   margin-top: 100px;
   margin-left: 300px;
@@ -58,4 +58,23 @@
   border-radius: 10px;
 }
 
+/*NEW STUDENT FORM CSS*/
+.AddCampusForm {
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid black
+}
 
+.campusFormTitle{
+  font-size: 25px;
+}
+
+.campusFormInputs{
+  margin: 5px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}

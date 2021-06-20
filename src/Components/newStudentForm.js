@@ -86,7 +86,7 @@ class NewStudentForm extends Component{
   render(){
   return(
     <div>
-    <form>
+    <form onSubmit={this.submitFunction}>
       <h1>Create A New Student</h1>
       <input placeholder = "Your First Name" onChange={this.updateFirstName} required/>
       <br/>
