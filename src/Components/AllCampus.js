@@ -29,6 +29,7 @@ class AllCampus extends Component{
     }
 
     getCampusData = () => {
+        //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
         axios.get('http://localhost:3000/APIURLGOESHERE')
         .then((response) => {
             this.setState({
@@ -46,10 +47,14 @@ class AllCampus extends Component{
         return(
             <div>
                 <h1>All Campuses</h1>
+
                 <p>Welcome to the all campuses page! Here you can take a look at all the 
                 campuses you already have and create new ones!</p>
+
                 <AddCampus/>
+
                 <h1>{this.state.loadMsg}</h1>
+
                 {showCards}
             </div>
         )
