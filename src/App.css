@@ -79,6 +79,36 @@
   background-color: gray;
 }
 
+/*ALL CAMPUS PAGE*/
+.allCampusTitle{
+  text-align: center;
+  color: white;
+  background-color: rgb(175, 175, 175);
+  padding: 100px;
+}
+
+.allCampusDescription{
+  text-align: center;
+  background-color: rgb(166, 248, 166);
+  padding: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 15px;;
+}
+
+.addCampusLink{
+  text-decoration: none;
+  color:white;
+  background-color: rgb(95, 95, 255);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.addCampusLink:hover{
+  background-color: gray;
+}
+
 /*STUDENT CARD*/
 .studentCard{
   display: grid;
