@@ -50,7 +50,7 @@ class NewStudentForm extends Component{
 
   submitFunction = (event) => {
     //Do not know the url for student database, so I added a placeholder for now - UPDATE LATER!
-    axios.post('http://localhost:3000/STUDENTDATABASEURLHERE',{
+    axios.post('http://localhost:4000/campuses',{
       'firstName': this.state.firstName,
       'lastName': this.state.lastName,
       'gpa': this.state.gpa,

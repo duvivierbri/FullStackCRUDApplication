@@ -52,9 +52,9 @@ class AddCampus extends Component{
     //Sends the information off to database
     addCampus = async(newCampusObject) => {
         //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
-       let response = axios.post('http://localhost:3000/APIURLGOESHERE', newCampusObject)
+       let response = axios.post('http://localhost:4000/campuses', newCampusObject)
        .then((response) => {
-           console.log(response.data)
+           console.log(response)
        })
        .catch((error) => console.log(error))
 
