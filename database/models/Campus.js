@@ -14,15 +14,7 @@ const Campus = db.sequelize.define('campus', {
         }
 
     },
-
-    imgUrl: {
-
-        type: Sequelize.STRING,
-        defaultValue: "https://cdn.pixabay.com/photo/2013/07/12/17/47/test-pattern-152459_960_720.png"
-
-    },
-
-
+    
     address: {
 
         type: Sequelize.STRING,
