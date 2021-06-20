@@ -12,7 +12,7 @@ class CampusCard extends React.Component{
 
         this.state = {
             selectedCampus: [],
-            showdetails: false
+            showdetails: false,
         }
     }
 
@@ -35,21 +35,10 @@ class CampusCard extends React.Component{
     }
 
     showDetails = () => {
-         let selectedCampus = {
-            id: this.props.campus.id,
-            name: this.props.campus.name,
-            description: this.props.campus.description,
-            image: this.props.campus.image
-        }
-
-        this.state.selectedCampus.push(selectedCampus);
-
-        console.log(this.state.selectedCampus);
-
-        this.setState({
-            showDetails: true
-        })
-        
+        let selectedCampus = axios.get("http://localhost:4000/campuses/" + this.props.campus.name);
+        alert("Here is some more information on " + this.props.campus.name +
+        "\nDescription:" + this.props.campus.description +
+        "\nAddress:" + selectedCampus.address);
     }
 
     render(){
@@ -66,8 +55,6 @@ class CampusCard extends React.Component{
 
                     <button className="campusDetails" onClick={this.showDetails}>See Details</button>
                     <button className="campusDelete" onClick={this.deleteCampus}>Delete</button>
-                    
-                    
             </div>
         )
     }

@@ -12,7 +12,8 @@ class AllCampus extends Component{
         campusData: [
             {"id": 1, "name":"Lehman", "description":"A big campus"},
             {"id": 2, "name":"Hunter", "description":"Another big campus"}], //List of campus objects (each campus) in database
-        loadMsg: "",
+        selectedCampus: [],
+        loadMsg: ""
     }
 
     //When the page loads
@@ -66,3 +67,14 @@ class AllCampus extends Component{
         )
     }
 }export default AllCampus;
+
+const CampusDetails = (name, description) => {
+    return (
+        <div className="singleCampusPage">
+            {this.printInfo()}
+            <h1>{name}</h1>
+
+            <p>{description}</p>
+        </div>
+    )
+} 
