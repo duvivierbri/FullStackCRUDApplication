@@ -28,7 +28,7 @@ class CampusCard extends React.Component{
 
         //Delete the item from the database and refresh the page!
         //Refreshing should repopulate the array with the updated data
-        axios.delete('http://localhost:4000/campuses', { data: campusObject })
+        axios.delete('http://localhost:4000/campuses/' + this.props.campus.id )
         .then(
             window.location.reload()
         )
@@ -37,8 +37,8 @@ class CampusCard extends React.Component{
     showDetails = () => {
         let selectedCampus = axios.get("http://localhost:4000/campuses/" + this.props.campus.name);
         alert("Here is some more information on " + this.props.campus.name +
-        "\nDescription:" + this.props.campus.description +
-        "\nAddress:" + selectedCampus.address);
+        "\nDescription: " + this.props.campus.description +
+        "\nAddress: " + this.props.campus.address);
     }
 
     render(){
