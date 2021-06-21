@@ -7,19 +7,15 @@ import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 class SingleCampus extends React.Component{
     constructor(props){
         super(props);
-        
         this.state = {
             currentCampus: []
         }
     }
     
     render(){
-       
         return (
             <div className="singleCampusPage">
-                {this.printInfo()}
-                <h1>{this.props.campus.name}</h1>
-
+                <h1>{this.props.campus}</h1>
             </div>
         )
     }
