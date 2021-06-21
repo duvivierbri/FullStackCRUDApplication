@@ -22,7 +22,7 @@ class StudentCard extends React.Component{
 
         //Delete the item from the database and refresh the page!
         //Refreshing should repopulate the array with the updated data
-        axios.delete('http://localhost:4000/ENTERSTUDENTDATABASEHERE', { data: studentObject })
+        axios.delete('http://localhost:4000/students/' + this.props.student.id)
         .then(
             window.location.reload()
         )
@@ -30,7 +30,7 @@ class StudentCard extends React.Component{
     }
 
     showDetails = () => {
-        alert("More Details On " + this.props.student.firstName 
+        alert("More Details On " + this.props.student.firstname 
                 + "\nGPA: " + this.props.student.gpa
                 + "\nEmail: " + this.props.student.email
                 + "\nCollege ID: " + this.props.student.collegeID)
@@ -45,7 +45,7 @@ class StudentCard extends React.Component{
                 </div>
                 
                 <div className="studentInfo">
-                    <h3>Name: {this.props.student.firstName} {this.props.student.lastName}</h3>
+                    <h3>Name: {this.props.student.firstname} {this.props.student.lastname}</h3>
                 </div>
                 
                 <button onClick={this.showDetails}>See Details</button>

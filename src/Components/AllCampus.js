@@ -37,7 +37,7 @@ class AllCampus extends Component{
         axios.get('http://localhost:4000/campuses')
         .then((response) => {
             this.setState({
-                campusData: response
+                campusData: response.data.campuses
             })
         })
         .catch((error) => console.log(error));

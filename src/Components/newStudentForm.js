@@ -61,7 +61,7 @@ class NewStudentForm extends Component{
   //Sends the information off to database
   addStudent = async(newStudentObject) => {
     //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
-   axios.post('http://localhost:3000/STUDENTDATABASEHERE', newStudentObject)
+   axios.post('http://localhost:4000/students', newStudentObject)
    .then((response) => {
      alert("Student Added! You can see the new student in the \"All Students\" page!");
      console.log(response)

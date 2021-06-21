@@ -35,10 +35,10 @@ class AllStudentsPage extends Component{
 
     getStudentData = () => {
         //NOTE - I don't know what the URL is for the database to this is here as filler... UPDATE LATER!
-        axios.get('http://localhost:4000/ENTERSTUDENTDATABASEHERE')
+        axios.get('http://localhost:4000/students')
         .then((response) => {
             this.setState({
-                studentData: response
+                studentData: response.data.students
             })
         })
         .catch((error) => console.log(error));
