@@ -33,6 +33,48 @@
   }
 }
 
+/*HOMEPAGE*/
+.homepageTitle{
+  text-align: center;
+  color: white;
+  background-image: url("https://hips.hearstapps.com/hbu.h-cdn.co/assets/17/32/1502291891-royal-roads-university.jpg");
+  padding: 100px;
+}
+
+.homepageTitle h1{
+  background-color: black;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 40px;
+}
+
+.homeIntro{
+  text-align: left;
+  font-size: 20px;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(175, 175, 175);
+}
+
+.homeOverview{
+  text-align: left;
+  font-size: 20px;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(147, 190, 240);
+}
+
+.homeConclusion{
+  text-align: center;
+  font-size: 20px;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(147, 240, 167);
+}
+
 /*NAVIGATION MENU ACROSS TOP*/
 .navigationMenu{
   padding: 30px;
@@ -46,7 +88,9 @@
 }
 
 .navigationMenuItems:hover{
-  background-color: gray;
+  background-color: black;
+  color:white;
+  border-radius: 10px;
 }
 
 /*ALL STUDENTS PAGE*/

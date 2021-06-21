@@ -51,7 +51,6 @@ class StudentCard extends React.Component{
                 <button onClick={this.showDetails}>See Details</button>
                 <button className="studentDelete" onClick={this.deleteStudent}>Delete</button>
             </div>
-        
         )
     }
 } export default StudentCard;
