@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
     }).catch(err => {
         res.status(500)
         .json({
-            message: "An error has occurred!",
+            message: "Error!",
             err,
         })
     })
@@ -30,7 +30,7 @@ router.get('/:id', (req, res, next) => {
     }).catch(err => {
         res.status(500)
         .json({
-            message: "An error has occurred!",
+            message: "Error!",
             err,
         })
     })
@@ -46,10 +46,10 @@ router.post('/', (req, res, next) => {
         collegeID: req.body.collegeID
     })
     .then(student => {
-        console.log("hshshshshs")
+        console.log("askdjasdasdhas test adsasidawjkd")
         res.status(201)
         .json({
-            message: "Success",
+            message: "Success!",
             student
         })
     })
@@ -57,7 +57,7 @@ router.post('/', (req, res, next) => {
         console.log(err)
         res.status(400)
         .json({
-            message: "Error posting",
+            message: "Error!",
             err,
         })
     })
@@ -75,14 +75,14 @@ router.put('/:id', (req, res, next) => {
 
         res.status(200)
         .json({
-            message: "Successfully updated student",
+            message: "Student Updated!",
             student
         })
     })
     .catch(err => {
         res.status(500)
         .json({
-            message: "Cant update student",
+            message: "Can't Update!",
             err
         })
     })
@@ -95,14 +95,14 @@ router.delete('/:id', (req, res, next) => {
 
         res.status(200)
         .json({
-            message: "Successfully updated student",
+            message: "Student Updated!",
             student
         })
     })
     .catch(err => {
         res.status(500)
         .json({
-            message: "Cant destroy student",
+            message: "Can't Delete!",
             err
         })
     })
